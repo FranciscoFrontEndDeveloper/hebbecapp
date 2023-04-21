@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { InitialComponent } from './components/initial/initial.component';
 import { LogsignbuttomsComponent } from './components/logsignbuttoms/logsignbuttoms.component';
+import { LoginformComponent } from './components/loginform/loginform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
     InitialComponent,
-    LogsignbuttomsComponent
+    LogsignbuttomsComponent,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
