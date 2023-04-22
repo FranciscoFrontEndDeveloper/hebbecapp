@@ -7,6 +7,9 @@ import { LogoComponent } from './components/logo/logo.component';
 import { InitialComponent } from './components/initial/initial.component';
 import { LogsignbuttomsComponent } from './components/logsignbuttoms/logsignbuttoms.component';
 import { LoginformComponent } from './components/loginform/loginform.component';
+import { LabelformComponent } from './components/labelform/labelform.component';
+import { ButtonformComponent } from './components/buttonform/buttonform.component';
+import { InputformComponent } from './components/inputform/inputform.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { LoginformComponent } from './components/loginform/loginform.component';
     LogoComponent,
     InitialComponent,
     LogsignbuttomsComponent,
-    LoginformComponent
+    LoginformComponent,
+    LabelformComponent,
+    ButtonformComponent,
+    InputformComponent
   ],
   imports: [
     BrowserModule,
