@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./loginform.component.sass'],
 })
 export class LoginformComponent {
-  labelEmail: string = 'Email';
-  labelPassword: string = 'Password';
+  labelEmail: string = 'email';
+  labelPassword: string = 'password';
+  valuebutton: string = 'enviar'
 }
