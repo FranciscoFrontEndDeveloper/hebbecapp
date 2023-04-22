@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -15,6 +15,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class InputformComponent implements ControlValueAccessor {
   email = '';
+  password = '';
+  @Input('inputType') inputType: string = 'text';
   private onChangefn!: Function;
 
   changeText($event: any): void {
@@ -25,6 +27,7 @@ export class InputformComponent implements ControlValueAccessor {
     //throw new Error('Method not implemented.');
     this.email = value;
   }
+
   registerOnChange(fn: any): void {
     //throw new Error('Method not implemented.');
     this.onChangefn = fn;

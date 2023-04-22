@@ -15,7 +15,7 @@ export class LoginformComponent {
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
       email: [''],
-      // password: ['']
+      password: ['']
     });
   }
 

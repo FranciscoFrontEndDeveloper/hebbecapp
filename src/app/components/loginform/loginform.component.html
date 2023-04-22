@@ -2,11 +2,11 @@
   <form action="" [formGroup]="loginForm" (ngSubmit)="submitLogin()" #form="ngForm">
     <div>
       <app-labelform [titleLabel]="labelEmail"></app-labelform>
-      <app-inputform formControlName="email"></app-inputform>
+      <app-inputform [inputType]="labelEmail" formControlName="email"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelPassword"></app-labelform>
-      <app-inputform></app-inputform>
+      <app-inputform [inputType]="labelPassword" formControlName="password"></app-inputform>
     </div>
     <div>
       <app-buttonform [valueButton]="valuebutton"></app-buttonform>
