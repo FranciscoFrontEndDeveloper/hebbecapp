@@ -15,6 +15,7 @@ import { SignformComponent } from './components/signform/signform.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TitlesectionComponent } from './components/titlesection/titlesection.component';
 import { HobbiesformComponent } from './components/hobbiesform/hobbiesform.component';
+import { EdituserformComponent } from './components/edituserform/edituserform.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HobbiesformComponent } from './components/hobbiesform/hobbiesform.compo
     SignformComponent,
     DashboardComponent,
     TitlesectionComponent,
-    HobbiesformComponent
+    HobbiesformComponent,
+    EdituserformComponent
   ],
   imports: [
     BrowserModule,
