@@ -1,8 +1,8 @@
 <div class="formContainer">
-  <form action="">
+  <form action="" [formGroup]="loginForm" (ngSubmit)="submitLogin()" #form="ngForm">
     <div>
       <app-labelform [titleLabel]="labelEmail"></app-labelform>
-      <app-inputform></app-inputform>
+      <app-inputform formControlName="email"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelPassword"></app-labelform>

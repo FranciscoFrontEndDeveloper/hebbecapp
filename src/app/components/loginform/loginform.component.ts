@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-loginform',
@@ -8,5 +9,17 @@ import { Component } from '@angular/core';
 export class LoginformComponent {
   labelEmail: string = 'email';
   labelPassword: string = 'password';
-  valuebutton: string = 'enviar'
+  valuebutton: string = 'enviar';
+  loginForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.loginForm = this.formBuilder.group({
+      email: [''],
+      // password: ['']
+    });
+  }
+
+  submitLogin() {
+    console.log(this.loginForm.value);
+  }
 }

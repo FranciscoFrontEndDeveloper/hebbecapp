@@ -10,6 +10,7 @@ import { LoginformComponent } from './components/loginform/loginform.component';
 import { LabelformComponent } from './components/labelform/labelform.component';
 import { ButtonformComponent } from './components/buttonform/buttonform.component';
 import { InputformComponent } from './components/inputform/inputform.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InputformComponent } from './components/inputform/inputform.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
