@@ -13,6 +13,7 @@ import { InputformComponent } from './components/inputform/inputform.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignformComponent } from './components/signform/signform.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TitlesectionComponent } from './components/titlesection/titlesection.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ButtonformComponent,
     InputformComponent,
     SignformComponent,
-    DashboardComponent
+    DashboardComponent,
+    TitlesectionComponent
   ],
   imports: [
     BrowserModule,

@@ -3,9 +3,10 @@
   <div class="contentContainer">
     <app-logo></app-logo>
     <picture>
-     <img src="../../../assets/img/usuario.png" alt="imagen usuario">
+      <img src="../../../assets/img/usuario.png" alt="imagen usuario" />
     </picture>
     <div class="userInfo">
+      <app-titlesection [titleSection]="datosRegistro"></app-titlesection>
       <app-labelform [titleLabel]="labelTipoDocumento"></app-labelform>
       <app-labelform [titleLabel]="infoEmail"></app-labelform>
     </div>
@@ -32,6 +33,35 @@
     <div class="userInfo">
       <app-labelform [titleLabel]="labelNumeroCelular"></app-labelform>
       <app-labelform [titleLabel]="infoEmail"></app-labelform>
+    </div>
+  </div>
+
+  <div class="contentContainer">
+    <div class="userInfo">
+      <app-titlesection
+        [titleSection]="datosComplementarios"
+      ></app-titlesection>
+      <app-labelform [titleLabel]="labelPaisResidencia"></app-labelform>
+      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+    </div>
+    <div class="userInfo">
+      <app-labelform [titleLabel]="labelCiudadResidencia"></app-labelform>
+      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+    </div>
+    <div class="userInfo">
+      <app-labelform [titleLabel]="labelDireccioResidencia"></app-labelform>
+      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+    </div>
+    <div class="userInfo">
+      <app-labelform [titleLabel]="labelImagenPerfil"></app-labelform>
+      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+    </div>
+  </div>
+
+  <div class="contentContainer">
+    <div class="userInfo">
+      <app-titlesection [titleSection]="hobbies"></app-titlesection>
+      <app-labelform [titleLabel]="infoHobbies"></app-labelform>
     </div>
   </div>
   <div class="footerContainer">footerContainer</div>
