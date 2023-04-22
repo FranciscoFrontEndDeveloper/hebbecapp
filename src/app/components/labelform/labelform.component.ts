@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-labelform',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./labelform.component.sass']
 })
 export class LabelformComponent {
-
+  @Input('titleLabel') titleLabel: string ="titulo del label";
 }
