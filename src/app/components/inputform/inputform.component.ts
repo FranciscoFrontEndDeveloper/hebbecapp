@@ -14,8 +14,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class InputformComponent implements ControlValueAccessor {
-  email = '';
-  password = '';
+  inputValue = '';
+
   @Input('inputType') inputType: string = 'text';
   private onChangefn!: Function;
 
@@ -25,7 +25,7 @@ export class InputformComponent implements ControlValueAccessor {
 
   writeValue(value: string): void {
     //throw new Error('Method not implemented.');
-    this.email = value;
+    this.inputValue = value;
   }
 
   registerOnChange(fn: any): void {

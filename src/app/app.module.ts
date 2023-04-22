@@ -11,6 +11,7 @@ import { LabelformComponent } from './components/labelform/labelform.component';
 import { ButtonformComponent } from './components/buttonform/buttonform.component';
 import { InputformComponent } from './components/inputform/inputform.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SignformComponent } from './components/signform/signform.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginformComponent,
     LabelformComponent,
     ButtonformComponent,
-    InputformComponent
+    InputformComponent,
+    SignformComponent
   ],
   imports: [
     BrowserModule,

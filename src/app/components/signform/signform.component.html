@@ -1,0 +1,75 @@
+<div class="formContainer">
+  <form
+    action=""
+    [formGroup]="signForm"
+    (ngSubmit)="submitSign()"
+    #form="ngForm"
+  >
+    <div>
+      <app-labelform [titleLabel]="labelEmail"></app-labelform>
+      <app-inputform
+        [inputType]="labelEmail"
+        formControlName="email"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelPassword"></app-labelform>
+      <app-inputform
+        [inputType]="labelPassword"
+        formControlName="password"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelTipoDocumento"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="tipoDocumento"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelNumeroDocumento"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="numeroDocumento"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelNombre"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="nombre"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelApellidos"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="apellidos"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelFechaNacimiento"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="fechaNacimiento"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelFechaExpedicion"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="fechaExpedicion"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-labelform [titleLabel]="labelNumeroCelular"></app-labelform>
+      <app-inputform
+        [inputType]="labeltext"
+        formControlName="numeroCelular"
+      ></app-inputform>
+    </div>
+    <div>
+      <app-buttonform [valueButton]="valuebutton"></app-buttonform>
+    </div>
+  </form>
+</div>
