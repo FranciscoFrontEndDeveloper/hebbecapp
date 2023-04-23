@@ -14,7 +14,7 @@ export class HobbiesformComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
-      email: [''],
+      hobbie: [''],
     });
   }
 

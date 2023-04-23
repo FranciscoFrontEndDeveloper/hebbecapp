@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { InitialComponent } from './components/initial/initial.component';
@@ -16,6 +16,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TitlesectionComponent } from './components/titlesection/titlesection.component';
 import { HobbiesformComponent } from './components/hobbiesform/hobbiesform.component';
 import { EdituserformComponent } from './components/edituserform/edituserform.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { EdituserformComponent } from './components/edituserform/edituserform.co
     DashboardComponent,
     TitlesectionComponent,
     HobbiesformComponent,
-    EdituserformComponent
+    EdituserformComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

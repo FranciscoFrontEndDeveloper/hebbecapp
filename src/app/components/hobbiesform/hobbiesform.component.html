@@ -1,8 +1,9 @@
 <div class="formContainer">
+  {{loginForm.value.hobbie}}
  <form action="" [formGroup]="loginForm" (ngSubmit)="submitLogin()" #form="ngForm">
    <div>
      <app-labelform [titleLabel]="labelHobbie"></app-labelform>
-     <app-inputform [inputType]="labeltext" formControlName="email"></app-inputform>
+     <app-inputform [inputType]="labeltext" formControlName="hobbie"></app-inputform>
    </div>
    <div>
      <app-buttonform [valueButton]="valuebutton"></app-buttonform>

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { InitialComponent } from './components/initial/initial.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EdituserformComponent } from './components/edituserform/edituserform.component';
+import { SignformComponent } from './components/signform/signform.component';
 
 const routes: Routes = [
   { path: '', component: InitialComponent },
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'edituserform', component: EdituserformComponent}
+  { path: 'edituserform', component: EdituserformComponent},
+  { path: 'sign', component: SignformComponent}
 ];
 
 @NgModule({

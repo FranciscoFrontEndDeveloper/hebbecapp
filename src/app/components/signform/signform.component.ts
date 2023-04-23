@@ -10,6 +10,7 @@ export class SignformComponent {
   labelPassword: string = 'password';
   labeltext: string = 'text';
 
+
   labelTipoDocumento: string = 'tipo de documento';
   labelNumeroDocumento: string = 'numero de identificacion';
   labelNombre: string = 'nombre';
@@ -17,8 +18,6 @@ export class SignformComponent {
   labelFechaNacimiento: string = 'fecha de nacimiento';
   labelFechaExpedicion: string = 'fecha de expedicion';
   labelNumeroCelular: string = 'numero de celular';
-
-
 
   valuebutton: string = 'enviar';
   signForm: FormGroup;
@@ -40,4 +39,5 @@ export class SignformComponent {
   submitSign() {
     console.log(this.signForm.value);
   }
+
 }
