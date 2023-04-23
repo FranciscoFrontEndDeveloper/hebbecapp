@@ -16,7 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class InputformComponent implements ControlValueAccessor {
   inputValue = '';
 
-  @Input('inputType') inputType: string = 'text';
+  @Input('inputType') inputType: any ;
   private onChangefn!: Function;
 
   changeText($event: any): void {

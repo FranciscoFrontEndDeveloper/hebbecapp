@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'edituserform', component: EdituserformComponent},
   { path: 'sign', component: SignformComponent},
-  { path: 'select', component: SelectformComponent}
 ];
 
 @NgModule({
