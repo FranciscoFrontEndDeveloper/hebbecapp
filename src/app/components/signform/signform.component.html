@@ -1,75 +1,43 @@
 <app-logo></app-logo>
 <app-logsignbuttoms></app-logsignbuttoms>
 <div class="formContainer">
-  <form
-    action=""
-    [formGroup]="signForm"
-    (ngSubmit)="submitSign()"
-    #form="ngForm"
-  >
+  <form action="" [formGroup]="signForm" (ngSubmit)="submitSign()" #form="ngForm">
     <div>
       <app-labelform [titleLabel]="labelEmail"></app-labelform>
-      <app-inputform
-        [inputType]="labelEmail"
-        formControlName="email"
-      ></app-inputform>
+      <app-inputform [inputType]="labelEmail" formControlName="email"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelPassword"></app-labelform>
-      <app-inputform
-        [inputType]="labelPassword"
-        formControlName="password"
-      ></app-inputform>
+      <app-inputform [inputType]="labelPassword" formControlName="password"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelTipoDocumento"></app-labelform>
-      <app-selectform
-        [selectOptions]="selectOptions"
-        formControlName="tipoDocumento"
-      ></app-selectform>
+      <app-selectform [selectOptions]="selectOptions" formControlName="tipoDocumento"></app-selectform>
       <!-- <app-inputform [inputType]="labeltext" formControlName="tipoDocumento"></app-inputform> -->
     </div>
     <div>
       <app-labelform [titleLabel]="labelNumeroDocumento"></app-labelform>
-      <app-inputform
-        [inputType]="labelNumber"
-        formControlName="numeroDocumento"
-      ></app-inputform>
+      <app-inputform [inputType]="labelNumber" formControlName="numeroDocumento" min="5"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelNombre"></app-labelform>
-      <app-inputform
-        [inputType]="labeltext"
-        formControlName="nombre"
-      ></app-inputform>
+      <app-inputform [inputType]="labeltext" formControlName="nombre"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelApellidos"></app-labelform>
-      <app-inputform
-        [inputType]="labeltext"
-        formControlName="apellidos"
-      ></app-inputform>
+      <app-inputform [inputType]="labeltext" formControlName="apellidos"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelFechaNacimiento"></app-labelform>
-      <app-inputform
-        [inputType]="labelData"
-        formControlName="fechaNacimiento"
-      ></app-inputform>
+      <app-inputform [inputType]="labelData" formControlName="fechaNacimiento"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelFechaExpedicion"></app-labelform>
-      <app-inputform
-        [inputType]="labelData"
-        formControlName="fechaExpedicion"
-      ></app-inputform>
+      <app-inputform [inputType]="labelData" formControlName="fechaExpedicion"></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelNumeroCelular"></app-labelform>
-      <app-inputform
-        [inputType]="labelNumber"
-        formControlName="numeroCelular"
-      ></app-inputform>
+      <app-inputform [inputType]="labelNumber" formControlName="numeroCelular"></app-inputform>
     </div>
     <div>
       <app-buttonform [valueButton]="valuebutton"></app-buttonform>
