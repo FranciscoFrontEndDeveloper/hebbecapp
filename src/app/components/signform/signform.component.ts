@@ -11,6 +11,7 @@ export class SignformComponent {
   labelEmail: string = 'email';
   labelPassword: string = 'password';
   labeltext: string = 'text';
+  labelData: string = 'date';
   selectOptions: any = [
     { name: 'Cedula de ciudadanía', abbrev: 'CC' },
     { name: 'Cedula de expedición', abbrev: 'CE' },
