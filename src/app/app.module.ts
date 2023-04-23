@@ -20,6 +20,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { inMemoryDataService } from './inMemoryData.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectformComponent } from './components/selectform/selectform.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     HobbiesformComponent,
     EdituserformComponent,
     HeaderComponent,
+    SelectformComponent,
   ],
   imports: [
     BrowserModule,

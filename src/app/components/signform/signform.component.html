@@ -12,7 +12,8 @@
     </div>
     <div>
       <app-labelform [titleLabel]="labelTipoDocumento"></app-labelform>
-      <app-inputform [inputType]="labeltext" formControlName="tipoDocumento"></app-inputform>
+      <app-selectform [selectOptions]="selectOptions" formControlName="tipoDocumento"></app-selectform>
+      <!-- <app-inputform [inputType]="labeltext" formControlName="tipoDocumento"></app-inputform> -->
     </div>
     <div>
       <app-labelform [titleLabel]="labelNumeroDocumento"></app-labelform>

@@ -1,0 +1,8 @@
+<div class="inputFormContainer">
+  <select (change)="changeText($event)">
+    <option>Seleccione un documento</option>
+    <option *ngFor="let state of selectOptions" [value]="state.abbrev">
+      {{ state.name }}
+    </option>
+  </select>
+</div>
