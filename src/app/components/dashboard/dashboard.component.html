@@ -2,60 +2,64 @@
   <header class="headerContainer">
     <app-header></app-header>
   </header>
-  <div class="contentContainer">
+  <div class="contentContainer" *ngFor="let user of userData">
     <picture>
       <img src="../../../assets/img/usuario.png" alt="imagen usuario" />
     </picture>
     <div class="userInfo">
       <app-titlesection [titleSection]="datosRegistro"></app-titlesection>
+      <app-labelform [titleLabel]="labelEmailAddres"></app-labelform>
+      <app-labelform [titleLabel]="user.email"></app-labelform>
+    </div>
+    <div class="userInfo">
       <app-labelform [titleLabel]="labelTipoDocumento"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.documentType"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelNumeroDocumento"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.documentNumber"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelNombre"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.firstname"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelApellidos"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.lastname"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelFechaNacimiento"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.birthdate"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelFechaExpedicion"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.expeditionDate"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelNumeroCelular"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.phoneNumber"></app-labelform>
     </div>
   </div>
 
-  <div class="contentContainer">
+  <div class="contentContainer" *ngFor="let user of userDataComplementary">
     <div class="userInfo">
       <app-titlesection
         [titleSection]="datosComplementarios"
       ></app-titlesection>
       <app-labelform [titleLabel]="labelPaisResidencia"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.country"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelCiudadResidencia"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.city"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelDireccioResidencia"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.address"></app-labelform>
     </div>
     <div class="userInfo">
       <app-labelform [titleLabel]="labelImagenPerfil"></app-labelform>
-      <app-labelform [titleLabel]="infoEmail"></app-labelform>
+      <app-labelform [titleLabel]="user.photoProfile"></app-labelform>
     </div>
   </div>
 

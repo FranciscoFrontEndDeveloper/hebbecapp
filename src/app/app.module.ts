@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule, } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { InitialComponent } from './components/initial/initial.component';
@@ -17,6 +17,9 @@ import { TitlesectionComponent } from './components/titlesection/titlesection.co
 import { HobbiesformComponent } from './components/hobbiesform/hobbiesform.component';
 import { EdituserformComponent } from './components/edituserform/edituserform.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { inMemoryDataService } from './inMemoryData.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,14 +37,17 @@ import { HeaderComponent } from './components/header/header.component';
     TitlesectionComponent,
     HobbiesformComponent,
     EdituserformComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(inMemoryDataService)
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
