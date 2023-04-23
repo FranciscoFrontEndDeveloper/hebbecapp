@@ -2,6 +2,12 @@
   <ul>
     <li><a routerLink="/dashboard">dashboard</a></li>
     <li><a routerLink="/edituserform">editar perfil</a></li>
-    <input type="button" value="salir" />
+    <input
+      type="image"
+      value="salir"
+      (click)="logOut()"
+      alt="logoutItem"
+      src="../../../assets/img/logoutWhite.png"
+    />
   </ul>
 </nav>
