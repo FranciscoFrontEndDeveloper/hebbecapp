@@ -28,6 +28,14 @@ export class EdituserformComponent {
   labelCiudadResidencia: string = 'ciudad de residencia';
   labelDireccioResidencia: string = 'direccion de residencia';
   labelImagenPerfil: string = 'imagen de perfil';
+  selectOptions: any = [
+    { name: 'Cedula de ciudadanía', abbrev: 'CC' },
+    { name: 'Cedula de expedición', abbrev: 'CE' },
+    { name: 'Tarjeta de identidad', abbrev: 'TI' },
+    { name: 'Pasaporte', abbrev: 'PA' },
+  ];
+  labelNumber: string = 'number';
+  labelData: string = 'date';
 
   constructor(private formBuilder: FormBuilder) {
     this.editUserSigninData = this.formBuilder.group({
