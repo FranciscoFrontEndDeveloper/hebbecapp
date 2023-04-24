@@ -37,6 +37,20 @@ export class EdituserformComponent {
   labelNumber: string = 'number';
   labelData: string = 'date';
 
+  selectPaises: any = [
+    { name: 'Colombia', abbrev: 'Colombia' },
+    { name: 'Estados Unidos', abbrev: 'Estados' },
+    { name: 'Alemania', abbrev: 'Alemania' },
+    { name: 'Japon', abbrev: 'Japon' },
+  ];
+
+  selectCapitales: any = [
+    { name: 'Bogota', abbrev: 'Bogota' },
+    { name: 'Washinton Unidos', abbrev: 'Washinton' },
+    { name: 'Berlin', abbrev: 'Berlin' },
+    { name: 'Tokio', abbrev: 'Tokio' },
+  ];
+
   constructor(private formBuilder: FormBuilder) {
     this.editUserSigninData = this.formBuilder.group({
       email: [''],
