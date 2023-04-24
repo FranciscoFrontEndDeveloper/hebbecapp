@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { User, UserComplemetary } from 'src/app/interfaces/user';
+import { HttpService } from 'src/app/service/http.service';
 @Component({
   selector: 'app-edituserform',
   templateUrl: './edituserform.component.html',
@@ -51,7 +52,13 @@ export class EdituserformComponent {
     { name: 'Tokio', abbrev: 'Tokio' },
   ];
 
-  constructor(private formBuilder: FormBuilder) {
+  userData!: User[];
+  userDataComplementary!: UserComplemetary[];
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private httpService: HttpService
+  ) {
     this.editUserSigninData = this.formBuilder.group({
       email: [''],
       password: [''],
@@ -69,6 +76,18 @@ export class EdituserformComponent {
       direccion: [''],
       imagen: [''],
     });
+  }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.httpService
+      .getUserData()
+      .subscribe((dataUser) => (this.userData = dataUser));
+    this.httpService
+      .getUserDataComplementary()
+      .subscribe((dataUser) => (this.userDataComplementary = dataUser));
+      this.editUserSigninData.patchValue(this.userData);
   }
 
   editUserFormSignIn() {
