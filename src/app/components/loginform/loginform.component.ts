@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-loginform',
@@ -11,16 +11,28 @@ export class LoginformComponent {
   labelPassword: string = 'password';
   valuebutton: string = 'enviar';
   loginForm: FormGroup;
+  errorLogin!: string;
+  errorMessageEmail!: string;
+  errorMessagePassword!: string;
+  errorBoolean: boolean;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      email: [''],
-      password: [''],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
     });
+    this.errorBoolean = false;
   }
 
   submitLogin() {
-    console.log(this.loginForm.value);
-    this.router.navigateByUrl("/dashboard")
+    if (
+      this.loginForm.value.email === 'example@example.com' &&
+      this.loginForm.value.password === '123456'
+    ) {
+      this.router.navigateByUrl('/dashboard');
+    } else {
+      this.errorBoolean = true;
+      this.errorLogin = 'Usuario o contraseña invalido'
+    }
   }
 }

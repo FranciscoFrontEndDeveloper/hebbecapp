@@ -1,15 +1,31 @@
 <div class="formContainer">
-  <form action="" [formGroup]="loginForm" (ngSubmit)="submitLogin()" #form="ngForm">
+  <form
+    action=""
+    [formGroup]="loginForm"
+    (ngSubmit)="submitLogin()"
+    #form="ngForm"
+  >
     <div>
       <app-labelform [titleLabel]="labelEmail"></app-labelform>
-      <app-inputform [inputType]="labelEmail" formControlName="email"></app-inputform>
+      <app-inputform
+        [inputType]="labelEmail"
+        formControlName="email"
+      ></app-inputform>
     </div>
     <div>
       <app-labelform [titleLabel]="labelPassword"></app-labelform>
-      <app-inputform [inputType]="labelPassword" formControlName="password"></app-inputform>
+      <app-inputform
+        [inputType]="labelPassword"
+        formControlName="password"
+      ></app-inputform>
+      <ng-container *ngIf="errorBoolean">{{ errorLogin }}</ng-container>
     </div>
     <div>
       <app-buttonform [valueButton]="valuebutton"></app-buttonform>
     </div>
+    <pre>
+        email: example@example.com
+        password: 123456
+    </pre>
   </form>
 </div>
